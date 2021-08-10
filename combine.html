@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <link rel="stylesheet" href="style.css">
+          <script src="jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" href="combine.css" >
+
+    <title>ROBOT</title>
+
+    <style>
+        .slidecontainer {
+            width: 88%;
+        }
+        
+        .slider {
+            -webkit-appearance: none;
+            width: 88%;
+            height: 5px;
+            background: #fcfcfc;
+            outline: none;
+            opacity: 0.8;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header></header>
+
+    <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+    <form id="myForm" action="combine.php" method="POST" target="dummyframe">
+        <form id="myForm" action="index.php" method="POST" target="dummyframe">
+            <center>
+                <h1 style="color:rgb(255, 255, 255);">ARM MOVE</h1>
+            </center>
+
+            <center>
+                </div>
+                <h2 style="color:rgb(255, 255, 255);">Engine1</h2>
+                <input type="range" min="0" max="180" value="0" id="myRange1" class="slider" name="Engine1">
+                <h3 style="color:rgb(243, 243, 243);">Value:
+                    <span id="value1"></span>
+                </h3>
+                <div>
+                </div>
+                <h2 style="color:rgb(255, 255, 255);">Engine2 </h2>
+                <input type="range" min="0" max="180" value="0" id="myRange2" class="slider" name="Engine2">
+                <h3 style="color:rgb(243, 243, 243);">Value:
+                    <span id="value2"></span>
+                </h3>
+                <div>
+                </div>
+                <h2 style="color:rgb(255, 255, 255);">Engine3</h2>
+                <input type="range" min="0" max="180" value="0" id="myRange3" class="slider" name="Engine3">
+                <h3 style="color:rgb(243, 243, 243);">Value:
+                    <span id="value3"></span>
+                </h3>
+                <div>
+                </div>
+                <h2 style="color:rgb(255, 255, 255);">Engine4</h2>
+                <input type="range" min="0" max="180" value="0" id="myRange4" class="slider" name="Engine4">
+                <h3 style="color:rgb(243, 243, 243);">Value:
+                    <span id="value4"></span>
+                </h3>
+                <div>
+                </div>
+                <h2 style="color:rgb(255, 255, 255);">Engine5</h2>
+                <input type="range" min="0" max="180" value="0" id="myRange5" class="slider" name="Engine5">
+                <h3 style="color:rgb(243, 243, 243);">Value:
+                    <span id="value5"></span>
+                </h3>
+                <div>
+                </div>
+                <h2 style="color:rgb(255, 255, 255);">Engine6</h2>
+                <input type="range" min="0" max="180" value="0" id="myRange6" class="slider" name="Engine6">
+                <h3 style="color:rgb(243, 243, 243);">Value:
+                    <span id="value6"></span>
+                </h3>
+                <div>
+            </center>
+            </p>
+
+            <center>
+                <div>
+                    <input type="submit" value="ON" name=on style="font-size: 30px; background: green; border-radius: 50px; ">
+                    <input type="submit" value="OFF" name=off style="font-size: 30px; background: red; border-radius: 50px; color: white;">
+
+                </div>
+                </p>
+                <input type="submit" value="Save" name=save style="font-size: 40px; background: rgb(117, 252, 117); border-radius: 50px;">
+            </center>
+
+
+            <center>
+                <h1 style="color:rgb(255, 255, 255);">ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</h1>
+            </center>
+            </p>
+
+
+            <center>
+                <h1 style="color:rgb(255, 255, 255);">MOVEING BASE</h1>
+                <center>
+                    </p>
+
+                    <center>
+                        <div class="forward">
+                            <input type="submit" value="↑Forward" name=F orward style="font-size: 40px; background: #9481b4; border-radius: 60px;">
+                        </div>
+
+                        <div class="center">
+                            <input type="submit" value="←Left" name=l eft style="font-size: 40px; background: #9481b4; border-radius: 60px;">
+                            <input type="submit" value="■Stop" name=s top style="font-size: 40px; background: #9481b4; border-radius: 60px;">
+                            <input type="submit" value="Right→" name=R ight style="font-size: 40px; background: #9481b4; border-radius: 60px;">
+                        </div>
+                        <div class="backward">
+                            <input type="submit" value="↓Backward" name=b ackward style="font-size: 40px; background: #9481b4; border-radius: 60px;">
+                        </div>
+                    </center>
+
+
+        </form>
+    </form>
+
+
+
+
+                
+             
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "538a3648-ed8f-4bf0-8d9b-f276e3064f80", // The ID of this integration.
+            region: "eu-gb", // The region your integration is hosted in.
+            serviceInstanceID: "5ea2583d-2fc7-4b01-ac12-ee9da6753523", // The ID of your service instance.
+            onLoad: function(instance) {
+                instance.render();
+            }
+        };
+        setTimeout(function() {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+        });
+    </script>
+
+</body>
+<script src="combine.js"></script>
+
+</html>
